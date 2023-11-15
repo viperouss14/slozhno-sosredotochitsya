@@ -3,8 +3,8 @@
 .page {
   color: var(--text-color, #F1B2CE);
   font-family: var(--main-font, sans-serif);
-  background-image: var(--variable-background-image);
   background-color: var(--variable-background-color);
+  background-image: var(--variable-background-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -36,6 +36,7 @@ button:disabled {
 .decorated-zone::after {
   content: "";
   position: absolute;
+  z-index: -1;
   inline-size: 25px;
   block-size: 25px;
 }
