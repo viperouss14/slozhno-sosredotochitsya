@@ -79,6 +79,10 @@ button:disabled {
   block-size: 9px;
 }
 
+/* .header__theme-menu {
+  justify-self: end;
+} */
+
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
