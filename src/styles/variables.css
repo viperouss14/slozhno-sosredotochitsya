@@ -1,0 +1,22 @@
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
+
+:root {
+  --main-font: 'IBM Plex Mono', sans-serif;
+  --text-color: #F1B2CE;
+  --title-main-color: #db00ff;
+  --decor-color: #FF0070;
+  --decor-transparent-color: rgba(255 0 112 / 0.40);
+  --accent-color: #FF0070;
+  --titel-accent-color: #db00ff;
+  --second-titel-accent-color: #FF0070;
+  --highlight-color: #000028;
+
+  --variable-background-image: url(../images/cover-image.png);
+
+  --visibility-rec-decoration: visible;
+}
+
+

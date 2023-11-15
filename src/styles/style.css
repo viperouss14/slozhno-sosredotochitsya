@@ -1,0 +1,296 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  color: var(--text-color, #F1B2CE);
+  font-family: var(--main-font, sans-serif);
+  background-image: var(--variable-background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a:focus,
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  padding: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
+  min-block-size: 100vh;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  border-inline-end: 1px solid var(--decor-color, #FF0070);
+  border-block-start: 1px solid var(--decor-color, #FF0070);
+  inset-inline-end: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
+  inset-block-start: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
+}
+
+.decorated-zone::after {
+  border-inline-start: 1px solid var(--decor-color, #FF0070);
+  border-block-end: 1px solid var(--decor-color, #FF0070);
+  inset-inline-start: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
+  inset-block-end: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
+}
+
+.rec-container {
+  position: absolute;
+  visibility: var(--visibility-rec-decoration, visible);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  inset-block-start: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
+  inset-inline-end: clamp(1.188rem, 0.591rem + 2.545vw, 1.813rem);
+}
+
+.rec-container::before {
+  content: "REC";
+  color: #FF0070;
+  line-height: 25px;
+}
+
+.rec-container::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  background-color: #FF0070;
+  filter: drop-shadow(0 0 4px #FF0070);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 2px 12px;
+  color: var(--second-titel-accent-color);
+  font-weight: 400;
+  line-height: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--decor-transparent-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid currentColor;
+}
+
+.header__theme-menu-button_active {
+  border-color: currentColor;
+}
+
+.header__title {
+  color: var(--title-main-color, #db00ff);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 #FF0070;
+}
+
+.title-decor {
+  color: var(--highlight-color, #000028);
+  font-weight: 700;
+  font-style: normal;
+  line-height: 130%;
+  background-color: var(--accent-color, #FF0070);
+}
+
+.content {
+  display: grid;
+  gap: clamp(3.125rem, 1.336rem + 7.634vw, 5rem);
+  padding: clamp(2.5rem, 1.307rem + 5.089vw, 3.75rem) clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
+}
+
+.content__link {
+  text-decoration: none;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
+}
+
+.content__link:hover {
+  text-decoration: underline;
+}
+
+.content__link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+}
+
+.section__title {
+  color: var(--second-titel-accent-color, #FF0070);
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 130%;
+}
+
+.content__list {
+  display: grid;
+  gap: 20px;
+}
+
+.content__article {
+  display: grid;
+  gap: 10px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.content__text {
+  line-height: 130%;
+}
+
+.section-advices .title {
+  margin-block-end: 20px;
+}
+
+.subtitle {
+  font-weight: 400;
+}
+
+.section_galary {
+  display: grid;
+  gap: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
+}
+
+.galary__list {
+  display: grid;
+  gap: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
+}
+
+.galary__image {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.footer {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
+  min-block-size: 100vh;
+}
+
+.footer-title {
+  color: var(--title-main-color, #db00ff);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  line-height: 82.5%;
+  text-shadow: 2px 2px 0 #FF0070;
+}
+
+@media (width >= 768px) {
+
+  .header {
+    aspect-ratio: 3 / 4;
+  }
+
+  .header .title-decor {
+    justify-self: end;
+    inline-size: calc(50vw - 20px);
+  }
+
+  .header__title {
+    position: relative;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    inset-inline-start: -20px;
+  }
+
+  .section {
+    grid-template-columns: clamp(14.75rem, -0.063rem + 30.859vw, 19.688rem) 1fr;
+  }
+
+  .section-reasons__content__list {
+    grid-column-start: span 2;
+  }
+
+  .galary__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .galary__list li:nth-child(1),
+  .galary__list li:nth-child(5) {
+    grid-column-start: span 2;
+  }
+
+  .galary__list li:nth-child(2),
+  .galary__list li:nth-child(3) {
+    grid-row-start: span 2;
+  }
+
+  .footer {
+    aspect-ratio: 3 / 4;
+  }
+
+  .footer-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+}
+
+
+@media (width >= 1024px) {
+
+  .header {
+    aspect-ratio: 4 / 3;
+  }
+
+  .header__theme-menu {
+    align-self: flex-start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .section-reasons__content__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer {
+    aspect-ratio: 4 / 3;
+  }
+}

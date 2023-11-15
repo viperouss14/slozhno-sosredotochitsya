@@ -1,0 +1,41 @@
+/*
+  Специально для тёмной темы при наличии класса,
+  здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+.page.theme_dark {
+   /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
+  --variable-background-image: url(../images/cover-image-dark.png);
+  --main-font: 'IBM Plex Mono', sans-serif;
+  --text-color: #F1B2CE;
+  --title-main-color: #db00ff;
+  --decor-color: #FF0070;
+  --decor-transparent-color: rgba(255 0 112 / 0.40);
+  --accent-color: #FF0070;
+  --titel-accent-color: #db00ff;
+  --second-titel-accent-color: #FF0070;
+  --highlight-color: #000028;
+  --visibility-rec-decoration: visible;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --variable-background-image: url(../images/cover-image-dark.png);
+    --main-font: 'IBM Plex Mono', sans-serif;
+    --text-color: #F1B2CE;
+    --title-main-color: #db00ff;
+    --decor-color: #FF0070;
+    --decor-transparent-color: rgba(255 0 112 / 0.40);
+    --accent-color: #FF0070;
+    --titel-accent-color: #db00ff;
+    --second-titel-accent-color: #FF0070;
+    --highlight-color: #000028;
+    --visibility-rec-decoration: visible;
+  }
+}
+
+
