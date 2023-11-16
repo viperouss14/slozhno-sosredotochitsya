@@ -4,7 +4,7 @@
 */
 
 :root {
-  --main-font: 'IBM Plex Mono', sans-serif;
+  --main-font: 'IBM Plex Mono', monospace;
   --text-color: #F1B2CE;
   --title-main-color: #db00ff;
   --decor-color: #FF0070;
@@ -13,6 +13,9 @@
   --titel-accent-color: #db00ff;
   --second-titel-accent-color: #FF0070;
   --highlight-color: #000028;
+
+  --title-font-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --title-font-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 
   --variable-background-image: url(../images/cover-image-dark.png);
   --variable-background-color: #000028;

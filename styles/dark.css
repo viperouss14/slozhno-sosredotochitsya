@@ -11,7 +11,7 @@
   */
   --variable-background-image: url(../images/cover-image-dark.png);
   --variable-background-color: #000028;
-  --main-font: 'IBM Plex Mono', sans-serif;
+  --main-font: 'IBM Plex Mono', monospace;
   --text-color: #F1B2CE;
   --title-main-color: #db00ff;
   --decor-color: #FF0070;
@@ -27,7 +27,7 @@
   :root {
     --variable-background-image: url(../images/cover-image-dark.png);
     --variable-background-color: #000028;
-    --main-font: 'IBM Plex Mono', sans-serif;
+    --main-font: 'IBM Plex Mono', monospace;
     --text-color: #F1B2CE;
     --title-main-color: #db00ff;
     --decor-color: #FF0070;
