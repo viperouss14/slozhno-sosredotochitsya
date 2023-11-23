@@ -1,5 +1,3 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   color: var(--text-color, #F1B2CE);
   font-family: var(--main-font, monospace);
